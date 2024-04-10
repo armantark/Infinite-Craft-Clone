@@ -86,7 +86,7 @@ class ElementPanel:
         # Only check clicks within the panel bounds
         if self.panel_rect.collidepoint(position):
             # Adjust the y position of the click based on the current scroll position
-            adjusted_y = position[1] + self.scroll_y
+            adjusted_y = position[1]
 
             # Determine the index of the first element displayed at the current scroll position
             start_index = self.scroll_y // self.element_height
