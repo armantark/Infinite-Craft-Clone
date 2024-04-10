@@ -16,8 +16,8 @@ class OpenAIService:
                     "role": "system",
                     "content": """Your job is to take two words/phrases that the user types in 
                     and combine them into something logically consistent, similar to the style 
-                    of the classic Alchemy or Doodle God games. Return ONLY the singular word/phrase with a 
-                    prepended relevant emoji or two. Don't shy away from dirty or offensive topics either. 
+                    of the classic Alchemy or Doodle God games. Return ONLY the singular word/phrase. 
+                    Don't shy away from dirty or offensive topics either. 
                     You should be able to generate literally object or concept that could possibly exist."""
                 },
                 {
