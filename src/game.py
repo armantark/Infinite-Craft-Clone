@@ -21,13 +21,6 @@ class Game:
                               DraggableElement("💧 Water", (0, 0), self.font),
                               DraggableElement("🌎 Earth", (0, 0), self.font),
                               DraggableElement("🌬️ Air", (0, 0), self.font)]
-        for i in range(20):  # Add enough elements to enable scrolling
-            self.base_elements.extend([
-                DraggableElement(str(i) + "🔥 Fire", (0, 0), self.font),
-                DraggableElement(str(i) + "💧 Water", (0, 0), self.font),
-                DraggableElement(str(i) + "🌎 Earth", (0, 0), self.font),
-                DraggableElement(str(i) + "🌬️ Air", (0, 0), self.font)
-            ])
 
     def combine_elements(self, element1, element2):
         # Set processing state to True to gray out the elements
