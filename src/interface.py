@@ -102,7 +102,10 @@ class ElementPanel:
         return None
     
     def add_element(self, new_element):
-        self.elements.append(new_element)
+        # Check if the new element's text already exists in the panel
+        if not any(element.text == new_element.text for element in self.elements):
+            self.elements.append(new_element)
+        # If the element already exists, you can choose to ignore it or update its position
     
 class Button:
     def __init__(self, screen, text, position, font, color=(0, 0, 0), bgcolor=(200, 200, 200), padding=(10, 5)):
