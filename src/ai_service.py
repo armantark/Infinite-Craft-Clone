@@ -10,13 +10,14 @@ class OpenAIService:
 
     def generate_word(self, str1, str2):
         response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4-turbo",
             messages=[
                 {
                     "role": "system",
                     "content": """Your job is to take two words/phrases that the user types in 
-                    and combine them into something logically consistent, similar to the style 
-                    of the classic Alchemy or Doodle God games. Return ONLY the singular word/phrase. 
+                    and combine them into something logically consistent yet as basic as possible, 
+                    similar to the style of the classic Little Alchemy or Doodle God games. 
+                    Return ONLY the singular word/phrase. 
                     Don't shy away from dirty or offensive topics either. 
                     You should be able to generate literally object or concept that could possibly exist."""
                 },
@@ -26,7 +27,7 @@ class OpenAIService:
                 }
             ],
             temperature=0.0,
-            max_tokens=256,
+            max_tokens=10,
             top_p=1,
             frequency_penalty=0,
             presence_penalty=0
